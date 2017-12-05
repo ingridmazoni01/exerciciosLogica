@@ -69,13 +69,89 @@
                function exercicio25(){
 
                    //http://www.devfuria.com.br/javascript/regexp/
+                   var feminino=new Array(2);
+                   var masculino=new Array(2);
+
+                   for(var i=1;i<=1;i++){
+                       feminino[i]=0;
+                       masculino[i]=0;
+                   }
+
+
+
+                   var i=1;
+                //    debugger;
                     
-                    regex= new RegExp('f(eminino)?', 'i');
+                    regexFeminino= new RegExp('f(eminino)?', 'i');
+                    regexMasculino= new RegExp('m(asculino)?', 'i');
+                    regexSim= new RegExp('s(im)?', 'i');
+                    regexNao= new RegExp('n(ão)?', 'i');
 
-                   var sexo= prompt("Digite o sexo")
+                    do{
+                        
+                    var sexo= prompt("Digite o sexo do "+i+" participante");
 
-                    if(sexo.match(regex)){
-                        alert("Vc é do sexo feminino");
+                    if(sexo.match(regexFeminino)){
+                     
+
+                        if(SimOuNao().match(regexSim)){
+                            feminino[0]++;
+                           //feminino sim 
+                           console.log(feminino[0]);
+
+                        }
+                        else{
+                            feminino[1]++;
+                           //feminino não
+                           console.log(feminino[1]);
+                        }
+
+
+                    }
+                    else{
+                        if(sexo.match(regexMasculino)){
+
+                            
+                            if(SimOuNao().match(regexSim)){
+                                masculino[0]++;
+                            //masculino sim 
+                            console.log(masculino[0]);
+
+                            }
+                            else{
+                                masculino[1]++;
+                            //masculino não
+                            console.log(masculino[1]);
+                            }
+
+
+                        }
+                        else{
+                            alert("Sexo inválido");
+
+                        }
+
+
+
+                    }
+                        i++;
+                    }
+                    while(i<=4)
+
+
+
+                    alert(
+                        feminino[0],
+                        feminino[1],
+                        masculino[0],
+                        masculino[1]
+                    )
+
+
+
+                    function SimOuNao(){
+
+                        return prompt("Digite Sim ou Não");
                     }
 
 
