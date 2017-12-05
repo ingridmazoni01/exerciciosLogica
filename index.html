@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <title></title>
+
+        <script>
+
+               
+               function exercicio21(){
+                    var soma=0 , i=1;
+                    
+                    do{
+                    
+                    soma= soma + parseInt(prompt("Digite o "+ i + " número"));
+                    i++;
+                    }
+                    while(i<=15)
+
+                    document.write("A soma dos números é " + soma);
+               }
+
+               function exercicio22(){
+
+                   var i=1 , soma=0;
+
+
+                   while(i<=50){
+
+                       if(i%2==1){
+                            soma=soma+i;
+                            document.write(i+"<br>");
+                       }
+
+                       i++;
+
+
+                   }
+                   alert("A soma dos números de 1 até 50 é "+ soma);
+                  
+               }
+
+               function exercicio23(){
+
+                 numero= parseInt(prompt("Digite um número para que seja exibida a tatuada"));
+
+
+                 for(var i=0;i<=20;i++){
+                     document.write( numero+" X "+i+" = "+ (numero*i)+"<br>");
+
+                 }
+
+               }
+
+               function exercicio24(){
+
+              
+
+
+                 for(var i=0;i<=10;i++){
+                    for(var j=0;j<=10;j++){
+
+                        document.write( i+" X "+j+" = "+ (i*j)+"<br>");
+                    } 
+                    document.write("<br>")
+                 }
+
+               }
+
+
+               function exercicio25(){
+                    
+                    regex= new RegExp('f(eminino)?', 'i');
+
+                   var sexo= prompt("Digite o sexo")
+
+                    if(sexo.match(regex)){
+                        alert("Vc é do sexo feminino");
+                    }
+
+                    
+
+
+               }
+
+
+
+
+
+
+
+
+
+
+
+
+
+         </script>
+
+
+
+
+
+
+    </head>
+
+<body>
+
+    <input type="button" value="exercicio21" onclick="exercicio21()" >
+    <input type="button" value="exercicio22" onclick="exercicio22()" >
+    <input type="button" value="exercicio23" onclick="exercicio23()" >
+    <input type="button" value="exercicio24" onclick="exercicio24()" >
+    <input type="button" value="exercicio25" onclick="exercicio25()" >
+
+
+
+
+
+
+</body>
+
+
+</html>
