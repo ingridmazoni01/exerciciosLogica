@@ -72,7 +72,7 @@
                    var feminino=new Array(2);
                    var masculino=new Array(2);
 
-                   for(var i=1;i<=1;i++){
+                   for(var i=0;i<=1;i++){
                        feminino[i]=0;
                        masculino[i]=0;
                    }
@@ -82,10 +82,10 @@
                    var i=1;
                 //    debugger;
                     
-                    regexFeminino= new RegExp('f(eminino)?', 'i');
-                    regexMasculino= new RegExp('m(asculino)?', 'i');
-                    regexSim= new RegExp('s(im)?', 'i');
-                    regexNao= new RegExp('n(ão)?', 'i');
+                    var regexFeminino= new RegExp('f(eminino)?', 'i');
+                    var regexMasculino= new RegExp('m(asculino)?', 'i');
+                    var regexSim= new RegExp('s(im)?', 'i');
+                    var regexNao= new RegExp('n(ão)?', 'i');
 
                     do{
                         
@@ -141,10 +141,10 @@
 
 
                     alert(
-                        feminino[0],
-                        feminino[1],
-                        masculino[0],
-                        masculino[1]
+                        "O número de pessoas que respondeu sim foi "+ (feminino[0]+masculino[0])+"\n"+
+                        "O número de pessoas que respondeu não foi "+ (feminino[1]+masculino[1])+"\n"+
+                        "O número de mulheres que respondeu sim foi "+ feminino[1] +"\n"+
+                        "A porcentagem de homens que responderam não foi "+ (masculino[1]*100/(masculino[0]+masculino[1]))
                     )
 
 
